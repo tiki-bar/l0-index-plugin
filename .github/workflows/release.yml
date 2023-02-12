@@ -38,7 +38,7 @@ jobs:
         uses: KageKirin/set-node-package-version@v1
         with:
           file: 'package.json'
-          version: ${{ steps.semver.outputs.release-version }
+          version: ${{ steps.semver.outputs.release-version }}
 
       - name: Run CI
         run: npm ci
@@ -54,4 +54,4 @@ jobs:
       - name: Tag & Release
         uses: ncipollo/release-action@v1
         with:
-          tag: ${{ steps.semver.outputs.release-version }
+          tag: ${{ steps.semver.outputs.release-version }}
