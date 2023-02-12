@@ -27,9 +27,18 @@ jobs:
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
+        with:
+          languages: javascript
 
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Run CI
+        run: npm ci
+
+      - name: Run Build
+        run: npm run build
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
