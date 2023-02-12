@@ -5,7 +5,7 @@
 
 import * as HttpHelpers from '../utils/http-helpers'
 
-export default class AppRepository {
+export default class BlockRepository {
   host: string
 
   constructor(host: string) {
@@ -14,15 +14,18 @@ export default class AppRepository {
 
   get(
     authorization: string,
-    appId: string,
+    request: BlockGet,
     page?: HttpHelpers.PageRequest
-  ): Promise<AppModel> {
+  ): Promise<BlockModel> {
     return fetch(
-      HttpHelpers.page(`${this.host}/api/latest/app/${appId}`, page),
+      HttpHelpers.page(
+        `${this.host}/api/latest/app/${request.appId}/address/${request.address}/block/${request.blockHash}`,
+        page
+      ),
       {
         method: 'get',
         headers: HttpHelpers.headers(authorization),
       }
-    ).then((response) => HttpHelpers.marshall<AppModel>(response))
+    ).then((response) => HttpHelpers.marshall<BlockModel>(response))
   }
 }

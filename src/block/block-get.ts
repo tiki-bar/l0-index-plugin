@@ -3,6 +3,8 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-type L0IndexConfig = {
-  host: string
+type BlockGet = {
+  appId: string
+  address: string
+  blockHash: string
 }
