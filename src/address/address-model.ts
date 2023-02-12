@@ -3,6 +3,8 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-import L0Index from './l0-index'
-
-export { L0Index }
+type AddressModel = {
+  appId: string
+  address: string
+  blocks: BlockPageModel
+}

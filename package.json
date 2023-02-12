@@ -4,7 +4,7 @@
   "description": "Plugin for easy client interfacing with the L0 Index API",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --project tsconfig.build.json",
     "format": "prettier --write \"src/**/*.{ts,js}\"",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
     "test": "jest --config jestconfig.json"
@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/tiki-bar/l0-index-plugin#readme",
   "devDependencies": {
+    "@jest/globals": "^29.4.2",
     "@types/jest": "^29.4.0",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
@@ -39,5 +40,6 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "types": "lib/index.d.ts"
 }
