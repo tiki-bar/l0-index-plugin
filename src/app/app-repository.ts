@@ -4,6 +4,7 @@
  */
 
 import * as HttpHelpers from '../utils/http-helpers'
+import { AppModel } from './app-model'
 
 export default class AppRepository {
   host: string

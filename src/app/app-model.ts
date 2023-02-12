@@ -3,7 +3,9 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-type AppModel = {
+import { AddressPageModel } from '../address/address-page-model'
+
+export type AppModel = {
   appId: string
   addresses: AddressPageModel
 }

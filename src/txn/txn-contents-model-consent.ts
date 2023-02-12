@@ -3,7 +3,7 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-type TxnContentsModelConsent = {
+export type TxnContentsModelConsent = {
   raw: string
   ownershipId: string
   destination: string

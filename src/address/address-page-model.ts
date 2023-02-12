@@ -3,7 +3,7 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-type AddressPageModel = {
+export type AddressPageModel = {
   page: number
   totalPages: number
   totalAddresses: number

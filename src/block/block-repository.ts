@@ -4,6 +4,8 @@
  */
 
 import * as HttpHelpers from '../utils/http-helpers'
+import { BlockGet } from './block-get'
+import { BlockModel } from './block-model'
 
 export default class BlockRepository {
   host: string
