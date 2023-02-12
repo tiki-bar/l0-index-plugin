@@ -1,6 +1,6 @@
 {
   "name": "@mytiki/l0-index-plugin",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Plugin for easy client interfacing with the L0 Index API",
   "main": "index.js",
   "scripts": {
