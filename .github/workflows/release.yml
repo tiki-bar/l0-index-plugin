@@ -1,0 +1,53 @@
+name: Release
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
+
+# Cancel any active builds when new commits are pushed
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Get Next Version
+      id: semver
+      uses: ietf-tools/semver-action@v1
+      with:
+        token: ${{ github.token }}
+        branch: main
+
+    - name: Set Version
+      id: package_version
+      uses: KageKirin/set-node-package-version@v1
+      with:
+        file: 'package.json'
+        version: ${{ steps.semver.outputs.release-version }
+
+    - name: Run CI
+      run: npm ci
+
+    - name: Run Build
+      run: npm run build
+
+    - name: Publish
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+    - name: Tag & Release
+      uses: ncipollo/release-action@v1
+      with:
+        tag: ${{ steps.semver.outputs.release-version }
