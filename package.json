@@ -1,5 +1,5 @@
 {
-  "name": "@tiki/l0-index-plugin",
+  "name": "@mytiki/l0-index-plugin",
   "version": "0.0.1",
   "description": "Plugin for easy client interfacing with the L0 Index API",
   "main": "index.js",
