@@ -37,7 +37,6 @@ jobs:
         id: package_version
         uses: KageKirin/set-node-package-version@v1
         with:
-          file: 'package.json'
           version: ${{ steps.semver.outputs.release-version }}
 
       - name: Run CI
