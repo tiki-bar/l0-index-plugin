@@ -3,7 +3,7 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-type ErrorModel = {
+export type ErrorModel = {
   id: string
   message: string
   detail: string

@@ -3,7 +3,7 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-type BlockModel = {
+export type BlockModel = {
   appId: string
   address: string
   hash: string

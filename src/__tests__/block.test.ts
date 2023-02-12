@@ -4,6 +4,7 @@
  */
 
 import BlockRepository from '../block/block-repository'
+import { BlockModel } from '../block/block-model'
 
 describe('Block Tests', () => {
   const body = {

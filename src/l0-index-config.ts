@@ -3,8 +3,6 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-export type BlockGet = {
-  appId: string
-  address: string
-  blockHash: string
+export type L0IndexConfig = {
+  host: string
 }

@@ -3,7 +3,7 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-type TxnGet = {
+export type TxnGet = {
   appId: string
   address: string
   blockHash: string

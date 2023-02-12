@@ -4,6 +4,8 @@
  */
 
 import * as HttpHelpers from '../utils/http-helpers'
+import { AddressGet } from './address-get'
+import { AddressModel } from './address-model'
 
 export default class AddressRepository {
   host: string

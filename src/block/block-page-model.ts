@@ -3,7 +3,7 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-type BlockPageModel = {
+export type BlockPageModel = {
   page: number
   totalPages: number
   totalHashes: number

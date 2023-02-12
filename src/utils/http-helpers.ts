@@ -4,6 +4,7 @@
  */
 
 export { headers, page, PageRequest, marshall }
+import { ErrorModel } from './error-model'
 
 function headers(token?: string): Record<string, string> {
   const headers: Record<string, string> = {

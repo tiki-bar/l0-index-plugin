@@ -4,6 +4,7 @@
  */
 
 import AddressRepository from '../address/address-repository'
+import { AddressModel } from '../address/address-model'
 
 describe('Address Tests', () => {
   const body = {

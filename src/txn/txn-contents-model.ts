@@ -3,6 +3,6 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-type TxnContentsModel = {
+export type TxnContentsModel = {
   raw: string
 }

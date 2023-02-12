@@ -4,6 +4,7 @@
  */
 
 import TxnRepository from '../txn/txn-repository'
+import { TxnModel } from '../txn/txn-model'
 
 describe('Txn Tests', () => {
   const body = {

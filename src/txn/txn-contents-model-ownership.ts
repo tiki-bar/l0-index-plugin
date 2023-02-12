@@ -3,7 +3,9 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-type TxnContentsModelOwnership = {
+import { TxnContentsModel } from './txn-contents-model'
+
+export type TxnContentsModelOwnership = {
   raw: string
   source: string
   type: string

@@ -3,7 +3,7 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-type AddressGet = {
+export type AddressGet = {
   appId: string
   address: string
 }

@@ -4,6 +4,8 @@
  */
 
 import * as HttpHelpers from '../utils/http-helpers'
+import { TxnGet } from './txn-get'
+import { TxnModel } from './txn-model'
 
 export default class TxnRepository {
   host: string
