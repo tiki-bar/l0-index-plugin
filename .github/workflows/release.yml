@@ -53,14 +53,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Commit Changes
-        run: |
-          git config --global user.name 'GH Release Action'
-          git config --global user.email 'gh-release-action@mytiki'
-          git add package.json
-          git commit -m "${{ steps.semver.outputs.nextStrict }}"
-          git push origin main
-
       - name: Tag & Release
         uses: ncipollo/release-action@v1
         with:
