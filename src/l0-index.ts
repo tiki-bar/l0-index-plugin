@@ -8,6 +8,14 @@ import AppRepository from './app/app-repository'
 import BlockRepository from './block/block-repository'
 import TxnRepository from './txn/txn-repository'
 import * as HttpHelpers from './utils/http-helpers'
+import { TxnGet } from './txn/txn-get'
+import { BlockGet } from './block/block-get'
+import { AddressModel } from './address/address-model'
+import { AddressGet } from './address/address-get'
+import { BlockModel } from './block/block-model'
+import { TxnModel } from './txn/txn-model'
+import { AppModel } from './app/app-model'
+import { L0IndexConfig } from './l0-index-config'
 
 export default class L0Index {
   appRepository: AppRepository

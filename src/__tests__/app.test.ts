@@ -4,6 +4,7 @@
  */
 
 import AppRepository from '../app/app-repository'
+import { AppModel } from '../app/app-model'
 
 describe('App Tests', () => {
   const body = {
