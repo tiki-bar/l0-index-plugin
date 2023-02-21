@@ -14,7 +14,7 @@ export default class SearchRepository {
     this.host = host
   }
 
-  search(authorization: string, id: string): Promise<Array<SearchModel>> {
+  search(authorization: string, id: string): Promise<SearchModel[]> {
     const url = new URL(`${this.host}/api/latest/search`)
     url.searchParams.append('id', id)
     return fetch(url, {
@@ -23,7 +23,7 @@ export default class SearchRepository {
     }).then(async (response) => {
       const body = await response.json()
       if (response.status != 200) return Promise.reject(body as ErrorModel)
-      return body as Array<SearchModel>
+      return body as SearchModel[]
     })
   }
 }

@@ -19,6 +19,7 @@ import { AppModel } from './app/app-model'
 import { AddressModel } from './address/address-model'
 import { AddressGet } from './address/address-get'
 import { AddressPageModel } from './address/address-page-model'
+import { SearchModel } from './search/search-model'
 
 export {
   L0Index,
@@ -37,4 +38,5 @@ export {
   AppModel,
   AddressGet,
   AddressPageModel,
+  SearchModel,
 }

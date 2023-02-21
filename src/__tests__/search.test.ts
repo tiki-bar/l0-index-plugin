@@ -26,7 +26,7 @@ describe('Search Tests', () => {
 
   test('Search - Success', async () => {
     const searchRepository = new SearchRepository('http://localhost')
-    const rsp: Array<SearchModel> = await searchRepository.search(
+    const rsp: SearchModel[] = await searchRepository.search(
       'dummy',
       body[0].appId
     )
